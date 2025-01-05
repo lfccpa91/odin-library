@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Library</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -13,32 +13,29 @@
         <h2>Look at all these books!  Any favorites we're missing?</h2>
     </div>
     <div class="sidebar">
-        <form action="" method="post">
-            <div id="Title">
-                <label for="">Title</label>
-                <input type="text" name="" id="">
+        <h3>Add a book</h3>
+        <form action="" method="post" id="newbook">
+            <div class="formline">
+                <label for="title">Title</label>
+                <input type="text" name="Title" id="title" required>
             </div>
-            <div id="Author">
-                <label for="">Author</label>
-                <input type="text" name="" id="">
+            <div class="formline">
+                <label for="author">Author</label>
+                <input type="text" name="Author" id="author" required>
             </div>
-            <div id="Pages">
-                <label for="">Pages</label>
-                <input type="number" name="" id="">
+            <div class="formline">
+                <label for="pages">Pages</label>
+                <input type="number" name="Pages" id="pages" required>
             </div>
-            <div id="Read">
-                <label for="">Read?</label>
-                <input type="checkbox" name="" id="">
+            <div class="formline">
+                <label for="read">Read?</label>
+                <input type="checkbox" name="read" id="read">
             </div>
-            <button type="submit">Add Book</button>
+            <button id="submitButton" type="submit">Add Book</button>
         </form>
     </div>
-    <div class="body">
-        <h3 id="status"></h3>
-        <div class="bookshelf">
-
-        </div>
-    </div>
+    <div id="bookshelf">
         
+    </div>      
 </body>
 </html>
