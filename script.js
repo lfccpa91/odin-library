@@ -5,13 +5,6 @@ const bookshelf = document.querySelector("#bookshelf");
 let updateVal = false;
 let updateIndex = "";
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
 function addBookToLibrary(title, author, pages, read, update=updateVal, index=updateIndex) {
     if(!update) {
         myLibrary.push(new Book(title, author, pages, read));
@@ -113,4 +106,28 @@ submitButton.addEventListener("click", () => {
 });
 
 
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    set updateTitle(value) {
+        this.title = value;
+    }
+
+    set updateAuthor(value) {
+        this.author = value;
+    }
+
+    set updatePages(value) {
+        this.pages = value;
+    }
+
+    set updateRead(value) {
+        this.read = value;
+    }
+}
 
